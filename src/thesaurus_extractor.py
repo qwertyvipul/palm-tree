@@ -11,20 +11,26 @@ def get_thesaurus(docs, is_corpus = False):
 
     features, matrix = tf_idf_extractor.generate_tf_idf_matrix(corpus)
     
+    print("LOG: Now multiplying matrix")
     td_matrix = matrix.transpose()
     thesaurus_matrix = np.matmul(td_matrix, td_matrix.transpose())
     
     # Create Ralation List
+    """"
+    print("LOG: Generating relation list")
     relation_list = []
     for row in range(0, len(features)):
-        for col in range(row, len(features)):
-            if thesaurus_matrix[row][col] == 0 or row == col:
+        for col in range(0, row):
+            if thesaurus_matrix[row][col] == 0:
                 continue
             relation_list.append([features[row], features[col], thesaurus_matrix[row][col]])
     
+    return relation_list
     df = pd.DataFrame(relation_list, columns = ["word-1", "word-2", "score"])
     df = df.sort_values("score", ascending = False)
     return df
+    """
+    return thesaurus_matrix
 
 """
 docs = [
