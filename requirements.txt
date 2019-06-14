@@ -1,0 +1,7 @@
+re
+string
+unicodedata
+nltk
+contractions
+inflect
+bs4
