@@ -1,0 +1,1 @@
+1. UMR: https://stackoverflow.com/questions/17347596/update-module-on-import-to-python-interpreter
