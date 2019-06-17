@@ -1,6 +1,4 @@
-re
-string
-unicodedata
+numpy
 nltk
 contractions
 inflect

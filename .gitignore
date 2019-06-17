@@ -3,3 +3,9 @@ datasets/*
 src/dump.txt
 src/__pycache__/*
 jupyter/.ipynb_checkpoints/*
+.idea/*
+data/bbc/*
+*.pyc
+static/corpus/*
+static/datasets/*
+venv/*
